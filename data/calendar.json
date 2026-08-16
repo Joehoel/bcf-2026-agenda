@@ -54,7 +54,7 @@
     ]
   },
   "openItems": [
-    "Ferrykeuze en dinsdaglogistiek bevestigen: boeking 13:20 versus “rond 14:00” uit de chat; een boot rond 12:00 is alleen als optie genoemd. Mirte en Sietse willen liever niet vóór 08:00 vertrekken.",
+    "Dinsdaglogistiek beslissen: de bevestigde ferry vertrekt om 13:20. Een eerdere boot rond 12:00 is alleen als optie genoemd. Vertrek om 08:00 is met de berekende reistijd te laat voor de officiële check-in van de geboekte ferry; spreek daarom een eerder vertrek of latere afvaart af.",
     "Joël en Sietse over de auto's verdelen",
     "Campingboeking voor twee tenten controleren",
     "Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen",
@@ -82,8 +82,8 @@
       "end": "2026-08-25T13:50:00",
       "endTimezone": "Europe/London",
       "location": "Port de Calais → Port of Dover",
-      "description": "De oorspronkelijke boekingsinformatie noemt 13:20 vertrek en 13:50 aankomst lokale tijd. In de groepschat wordt gesproken over de bestaande boot rond 14:00 en eventueel een eerdere boot rond 12:00. Sietse zegt expliciet dat die eerdere boot niet per se hoeft; Mirte en Sietse vinden niet vóór 08:00 vertrekken prima. Controleer daarom de boekingsbevestiging en flexibiliteit voordat deze tijd definitief wordt.",
-      "status": "tentative"
+      "description": "Bevestigd in de P&O-boekingsafbeelding: Calais → Dover op 25 augustus 2026, vertrek 13:20 en aankomst 13:50 lokale tijd. Product: Standard. Schip: P&O Liberte. Een eerdere boot rond 12:00 is later in de groepschat alleen als mogelijke wijziging genoemd en is niet de huidige boeking.",
+      "status": "confirmed"
     },
     {
       "id": "green-acres-stay",
@@ -180,7 +180,8 @@
       "end": "2026-08-30T17:35:00",
       "endTimezone": "Europe/Paris",
       "location": "Port of Dover → Port de Calais",
-      "description": "Boekingstijden. P&O voertuigcheck-in sluit om 14:05, na security; mik vanwege grenscontrole en zomerdrukte op aankomst rond 13:05."
+      "description": "Bevestigd in de P&O-boekingsafbeelding: Dover → Calais op 30 augustus 2026, vertrek 15:05 en aankomst 17:35 lokale tijd. Product: Standard. Schip: P&O Liberte. P&O voertuigcheck-in sluit om 14:05, na security; mik vanwege grenscontrole en zomerdrukte op aankomst rond 13:05.",
+      "status": "confirmed"
     },
     {
       "id": "drive-home",
