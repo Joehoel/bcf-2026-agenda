@@ -54,7 +54,7 @@
     ]
   },
   "openItems": [
-    "Dinsdaglogistiek beslissen: Google Maps geeft 3 uur 53 minuten vanaf de Distelvlinderlaan. Vertrek om 08:00 betekent routeaankomst 11:53 en slechts 27 minuten marge tot de uiterste check-in om 12:20. De groepsvuistregel van zes uur vóór de ferry komt bij de bevestigde afvaart van 13:20 uit op vertrek om 07:20.",
+    "Dinsdaglogistiek beslissen: reken voor de autorit vanaf de Distelvlinderlaan ongeveer 4 uur, plus pauze en vertraging. De agenda reserveert 4 uur 30 minuten. Bij de bevestigde ferry van 13:20 en uiterste check-in om 12:20 is vertrek om 08:00 krap; de groepsvuistregel van zes uur vóór vertrek komt uit rond 07:20.",
     "Joël en Sietse over de auto's verdelen",
     "Campingboeking voor twee tenten controleren",
     "Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen",
@@ -68,11 +68,11 @@
       "id": "depart-nl",
       "title": "Gepland vertrek: Apeldoorn → Calais (bevestigen)",
       "start": "2026-08-25T08:00:00",
-      "end": "2026-08-25T11:53:00",
+      "end": "2026-08-25T12:30:00",
       "timezone": "Europe/Amsterdam",
       "location": "Distelvlinderlaan, Apeldoorn → Port of Calais Ferry Entrance, 285 Avenue du Mérite Maritime, Calais",
       "status": "tentative",
-      "description": "Google Maps vanaf de Distelvlinderlaan naar de ferry-ingang geeft circa 3 uur 53 minuten zonder stop of vertraging; verwachte routeaankomst bij vertrek om 08:00 is 11:53. De geboekte ferry vertrekt om 13:20 en de uiterste voertuigcheck-in is 12:20, na security. Er blijft dan slechts 27 minuten over voor pauze, file, grenscontrole en security. Volgens de in de groepschat gekozen vuistregel van zes uur vóór de ferry vertrekken zou 07:20 logisch zijn. Definitieve vertrektijd samen afspreken."
+      "description": "Google Maps geeft ongeveer 4 uur rijden vanaf de Distelvlinderlaan naar de ferry-ingang. In de agenda is 4 uur 30 minuten gereserveerd voor een korte stop en beperkte vertraging. De geboekte ferry vertrekt om 13:20 en de uiterste voertuigcheck-in is 12:20, na security. Vertrek om 08:00 biedt daarom onvoldoende betrouwbare marge; met de groepsvuistregel van zes uur vóór de ferry zou vertrek rond 07:20 passen. Definitieve vertrektijd samen afspreken."
     },
     {
       "id": "ferry-out",

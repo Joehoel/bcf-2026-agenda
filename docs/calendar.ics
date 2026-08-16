@@ -66,17 +66,16 @@ UID:depart-nl@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
 SUMMARY:Gepland vertrek: Apeldoorn → Calais (bevestigen)
 DTSTART;TZID=Europe/Amsterdam:20260825T080000
-DTEND;TZID=Europe/Amsterdam:20260825T115300
+DTEND;TZID=Europe/Amsterdam:20260825T123000
 LOCATION:Distelvlinderlaan\, Apeldoorn → Port of Calais Ferry Entrance\
  , 285 Avenue du Mérite Maritime\, Calais
-DESCRIPTION:Google Maps vanaf de Distelvlinderlaan naar de ferry-ingang g
- eeft circa 3 uur 53 minuten zonder stop of vertraging\; verwachte routea
- ankomst bij vertrek om 08:00 is 11:53. De geboekte ferry vertrekt om 13:
- 20 en de uiterste voertuigcheck-in is 12:20\, na security. Er blijft dan
-  slechts 27 minuten over voor pauze\, file\, grenscontrole en security. 
- Volgens de in de groepschat gekozen vuistregel van zes uur vóór de fer
- ry vertrekken zou 07:20 logisch zijn. Definitieve vertrektijd samen afsp
- reken.
+DESCRIPTION:Google Maps geeft ongeveer 4 uur rijden vanaf de Distelvlinde
+ rlaan naar de ferry-ingang. In de agenda is 4 uur 30 minuten gereserveer
+ d voor een korte stop en beperkte vertraging. De geboekte ferry vertrekt
+  om 13:20 en de uiterste voertuigcheck-in is 12:20\, na security. Vertre
+ k om 08:00 biedt daarom onvoldoende betrouwbare marge\; met de groepsvui
+ stregel van zes uur vóór de ferry zou vertrek rond 07:20 passen. Defin
+ itieve vertrektijd samen afspreken.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
