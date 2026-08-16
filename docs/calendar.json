@@ -54,7 +54,7 @@
     ]
   },
   "openItems": [
-    "Verzamelplek en definitieve vertrektijd op dinsdag afspreken",
+    "Ferrykeuze en dinsdaglogistiek bevestigen: boeking 13:20 versus “rond 14:00” uit de chat; een boot rond 12:00 is alleen als optie genoemd. Mirte en Sietse willen liever niet vóór 08:00 vertrekken.",
     "Joël en Sietse over de auto's verdelen",
     "Campingboeking voor twee tenten controleren",
     "Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen",
@@ -66,13 +66,13 @@
   "events": [
     {
       "id": "depart-nl",
-      "title": "Autorit: Apeldoorn → Calais",
-      "start": "2026-08-25T06:00:00",
-      "end": "2026-08-25T10:35:00",
+      "title": "Gepland vertrek: Apeldoorn → Calais (bevestigen)",
+      "start": "2026-08-25T08:00:00",
+      "end": "2026-08-25T12:35:00",
       "timezone": "Europe/Amsterdam",
       "location": "Apeldoorn → Port de Calais, 62100 Calais, Frankrijk",
       "status": "tentative",
-      "description": "Routeberekening: circa 390 km en 4 uur 34 minuten zonder stops of vertraging. Vertrek om 06:00 is het veilige voorstel: mik op aankomst uiterlijk 11:20 (twee uur voor vertrek); de uiterste voertuigcheck-in is 12:20. Vertrek om 08:00 is te laat: zelfs zonder pauze kom je pas rond 12:34 aan."
+      "description": "Volgens de groepschat willen Mirte en Sietse liever niet vóór 08:00 vertrekken. Routeberekening: circa 390 km en 4 uur 34 minuten zonder stops of vertraging; met een stop en file duurt het langer. Dit botst met de genoemde boeking van 13:20, omdat de uiterste voertuigcheck-in dan 12:20 is. Als de ferry werkelijk rond 14:00 vertrekt, sluit 08:00 beter aan bij de in de chat genoemde zes uur reistijd inclusief marge. Definitieve ferry en vertrektijd samen bevestigen."
     },
     {
       "id": "ferry-out",
@@ -82,7 +82,8 @@
       "end": "2026-08-25T13:50:00",
       "endTimezone": "Europe/London",
       "location": "Port de Calais → Port of Dover",
-      "description": "Boekingstijden. Engeland is één uur vroeger; de overtocht duurt feitelijk 1 uur 30 minuten. Zorg voor ruime marge voor grenscontrole en check-in."
+      "description": "De oorspronkelijke boekingsinformatie noemt 13:20 vertrek en 13:50 aankomst lokale tijd. In de groepschat wordt gesproken over de bestaande boot rond 14:00 en eventueel een eerdere boot rond 12:00. Sietse zegt expliciet dat die eerdere boot niet per se hoeft; Mirte en Sietse vinden niet vóór 08:00 vertrekken prima. Controleer daarom de boekingsbevestiging en flexibiliteit voordat deze tijd definitief wordt.",
+      "status": "tentative"
     },
     {
       "id": "green-acres-stay",

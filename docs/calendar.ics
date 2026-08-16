@@ -64,15 +64,17 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:depart-nl@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
-SUMMARY:Autorit: Apeldoorn → Calais
-DTSTART;TZID=Europe/Amsterdam:20260825T060000
-DTEND;TZID=Europe/Amsterdam:20260825T103500
+SUMMARY:Gepland vertrek: Apeldoorn → Calais (bevestigen)
+DTSTART;TZID=Europe/Amsterdam:20260825T080000
+DTEND;TZID=Europe/Amsterdam:20260825T123500
 LOCATION:Apeldoorn → Port de Calais\, 62100 Calais\, Frankrijk
-DESCRIPTION:Routeberekening: circa 390 km en 4 uur 34 minuten zonder stop
- s of vertraging. Vertrek om 06:00 is het veilige voorstel: mik op aankom
- st uiterlijk 11:20 (twee uur voor vertrek)\; de uiterste voertuigcheck-i
- n is 12:20. Vertrek om 08:00 is te laat: zelfs zonder pauze kom je pas r
- ond 12:34 aan.
+DESCRIPTION:Volgens de groepschat willen Mirte en Sietse liever niet vó
+ ór 08:00 vertrekken. Routeberekening: circa 390 km en 4 uur 34 minuten 
+ zonder stops of vertraging\; met een stop en file duurt het langer. Dit 
+ botst met de genoemde boeking van 13:20\, omdat de uiterste voertuigchec
+ k-in dan 12:20 is. Als de ferry werkelijk rond 14:00 vertrekt\, sluit 08
+ :00 beter aan bij de in de chat genoemde zes uur reistijd inclusief marg
+ e. Definitieve ferry en vertrektijd samen bevestigen.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
@@ -82,9 +84,13 @@ SUMMARY:P&O Ferry: Calais → Dover
 DTSTART;TZID=Europe/Paris:20260825T132000
 DTEND;TZID=Europe/London:20260825T135000
 LOCATION:Port de Calais → Port of Dover
-DESCRIPTION:Boekingstijden. Engeland is één uur vroeger\; de overtocht 
- duurt feitelijk 1 uur 30 minuten. Zorg voor ruime marge voor grenscontro
- le en check-in.
+DESCRIPTION:De oorspronkelijke boekingsinformatie noemt 13:20 vertrek en 
+ 13:50 aankomst lokale tijd. In de groepschat wordt gesproken over de bes
+ taande boot rond 14:00 en eventueel een eerdere boot rond 12:00. Sietse 
+ zegt expliciet dat die eerdere boot niet per se hoeft\; Mirte en Sietse 
+ vinden niet vóór 08:00 vertrekken prima. Controleer daarom de boekings
+ bevestiging en flexibiliteit voordat deze tijd definitief wordt.
+STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:green-acres-stay@bcf-2026-agenda
