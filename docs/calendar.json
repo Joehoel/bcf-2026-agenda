@@ -5,23 +5,58 @@
     "timezone": "Europe/Amsterdam",
     "lastUpdated": "2026-08-16",
     "sources": [
-      {"label": "Big Church Festival — event schedule", "url": "https://bigchurchfestival.com/helpful-info/event-schedule/"},
-      {"label": "Big Church Festival — route en vertrekadvies", "url": "https://bigchurchfestival.com/helpful-info/getting-here/"},
-      {"label": "P&O Ferries — check-ininformatie", "url": "https://www.poferries.com/en/routes/dover-to-calais/travel-information-25/passenger-travel-information"}
+      {
+        "label": "Big Church Festival — event schedule",
+        "url": "https://bigchurchfestival.com/helpful-info/event-schedule/"
+      },
+      {
+        "label": "Big Church Festival — route en vertrekadvies",
+        "url": "https://bigchurchfestival.com/helpful-info/getting-here/"
+      },
+      {
+        "label": "P&O Ferries — check-ininformatie",
+        "url": "https://www.poferries.com/en/routes/dover-to-calais/travel-information-25/passenger-travel-information"
+      },
+      {
+        "label": "Green Acres Holiday Retreat — contact en adres",
+        "url": "https://www.greenacrescampsite.uk/contact/"
+      }
     ]
   },
   "group": {
-    "people": ["Rob", "Joël", "Sietse", "Douwe", "Mirte"],
-    "tents": [
-      {"name": "Tent 1", "people": ["Rob", "Joël", "Sietse"]},
-      {"name": "Tent 2", "people": ["Douwe", "Mirte"]}
+    "people": [
+      "Rob",
+      "Joël",
+      "Sietse",
+      "Douwe",
+      "Mirte"
     ],
-    "vehicles": ["Ford Fiesta — Rob", "Fiat Punto — Douwe en Mirte"]
+    "tents": [
+      {
+        "name": "Tent 1",
+        "people": [
+          "Rob",
+          "Joël",
+          "Sietse"
+        ]
+      },
+      {
+        "name": "Tent 2",
+        "people": [
+          "Douwe",
+          "Mirte"
+        ]
+      }
+    ],
+    "vehicles": [
+      "Ford Fiesta — Rob",
+      "Fiat Punto — Douwe en Mirte"
+    ]
   },
   "openItems": [
     "Verzamelplek en definitieve vertrektijd op dinsdag afspreken",
     "Joël en Sietse over de auto's verdelen",
-    "Campingboeking en exacte adresgegevens controleren",
+    "Campingboeking voor twee tenten controleren",
     "Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen",
     "Betaling Green Acres (€ 64,55 p.p.) controleren",
     "Paspoorten en UK ETA's controleren",
@@ -31,13 +66,13 @@
   "events": [
     {
       "id": "depart-nl",
-      "title": "Vertrek vanuit Nederland",
-      "start": "2026-08-25T08:00:00",
-      "end": "2026-08-25T08:15:00",
+      "title": "Autorit: Apeldoorn → Calais",
+      "start": "2026-08-25T06:00:00",
+      "end": "2026-08-25T10:35:00",
       "timezone": "Europe/Amsterdam",
-      "location": "Verzamelplek nog afspreken",
+      "location": "Apeldoorn → Port de Calais, 62100 Calais, Frankrijk",
       "status": "tentative",
-      "description": "Richting Calais. Reken op ongeveer vier uur rijden plus pauze, file, inchecken en grenscontrole."
+      "description": "Routeberekening: circa 390 km en 4 uur 34 minuten zonder stops of vertraging. Vertrek om 06:00 is het veilige voorstel: mik op aankomst uiterlijk 11:20 (twee uur voor vertrek); de uiterste voertuigcheck-in is 12:20. Vertrek om 08:00 is te laat: zelfs zonder pauze kom je pas rond 12:34 aan."
     },
     {
       "id": "ferry-out",
@@ -55,28 +90,48 @@
       "allDay": true,
       "startDate": "2026-08-25",
       "endDate": "2026-08-28",
-      "location": "Camping Green Acres — exact adres controleren",
+      "location": "Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk",
       "description": "Drie nachten. Inchecken volgens de boekingsinformatie tussen 14:00 en 20:00. Programma bewust ontspannen en grotendeels open."
     },
     {
       "id": "green-acres-arrival",
-      "title": "Aankomst en tenten opzetten bij Green Acres",
-      "start": "2026-08-25T16:30:00",
-      "end": "2026-08-25T18:00:00",
+      "title": "Autorit: Dover → Green Acres",
+      "start": "2026-08-25T14:20:00",
+      "end": "2026-08-25T17:00:00",
       "timezone": "Europe/London",
-      "location": "Camping Green Acres — exact adres controleren",
+      "location": "Port of Dover → Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF",
       "status": "tentative",
-      "description": "Geschatte aankomst; pas aan zodra route en exact campingadres bevestigd zijn."
+      "description": "Routeberekening: circa 224 km en 2 uur 38 minuten zonder stops of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen in Dover; verwachte aankomst rond 17:00."
+    },
+    {
+      "id": "green-acres-setup",
+      "title": "Aankomst en tenten opzetten bij Green Acres",
+      "start": "2026-08-25T17:00:00",
+      "end": "2026-08-25T18:30:00",
+      "timezone": "Europe/London",
+      "location": "Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk",
+      "status": "tentative",
+      "description": "Geschatte aankomst op basis van de route vanaf Dover. De oorspronkelijke groepsinformatie noemt inchecken tussen 14:00 en 20:00."
+    },
+    {
+      "id": "green-acres-pack",
+      "title": "Tenten afbreken en Green Acres verlaten",
+      "start": "2026-08-28T07:30:00",
+      "end": "2026-08-28T09:00:00",
+      "timezone": "Europe/London",
+      "location": "Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk",
+      "status": "tentative",
+      "description": "Voorlopig tijdvak om twee tenten en alle kampeerspullen in te pakken vóór de rit naar Big Church Festival."
     },
     {
       "id": "bcf-travel",
-      "title": "Green Acres → Big Church Festival",
-      "start": "2026-08-28T08:30:00",
-      "end": "2026-08-28T12:30:00",
+      "title": "Autorit: Green Acres → Big Church Festival",
+      "start": "2026-08-28T09:00:00",
+      "end": "2026-08-28T11:00:00",
       "timezone": "Europe/London",
-      "location": "Wiston Estate, Steyning, BN44 3DD",
+      "location": "Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF → Wiston Estate, Steyning BN44 3DD",
       "status": "tentative",
-      "description": "Tenten afbreken, rijden, toegang en tenten opzetten. Exacte tijden hangen af van het campingadres en de boeking. Campingingang BCF via Green Gate; volg de evenementborden."
+      "description": "Routeberekening: circa 149 km en 2 uur zonder stops of vertraging. Campingingang Big Church via Green Gate; volg bij aankomst de evenementborden."
     },
     {
       "id": "bcf-friday",
@@ -104,7 +159,17 @@
       "timezone": "Europe/London",
       "location": "Wiston Estate, Steyning, BN44 3DD",
       "status": "tentative",
-      "description": "Voorstel: uiterlijk 10:15 wegrijden. Route naar Dover is circa 2 uur 8 minuten zonder vertraging; Big Church adviseert minstens 30 minuten voor uitrijden. P&O check-in sluit 60 minuten vóór vertrek en adviseert extra tijd voor security. Hierdoor wordt vrijwel de hele zondag gemist; festivalpoorten openen pas 10:00."
+      "description": "Voorstel: om 07:30 beginnen en uiterlijk 10:15 wegrijden. Big Church adviseert minstens 30 minuten voor het verlaten van het terrein. Omdat de festivalpoorten om 10:00 openen, wordt vrijwel de hele zondag gemist."
+    },
+    {
+      "id": "bcf-dover-drive",
+      "title": "Autorit: Big Church Festival → Dover",
+      "start": "2026-08-30T10:15:00",
+      "end": "2026-08-30T12:25:00",
+      "timezone": "Europe/London",
+      "location": "Wiston Estate, Steyning BN44 3DD → Port of Dover Eastern Docks",
+      "status": "tentative",
+      "description": "Routeberekening: circa 170 km en 2 uur 8 minuten zonder stops of vertraging. Dit geeft ongeveer 40 minuten extra marge vóór de aanbevolen aankomst om 13:05 en 1 uur 40 vóór de uiterste check-in om 14:05."
     },
     {
       "id": "ferry-back",
@@ -118,13 +183,13 @@
     },
     {
       "id": "drive-home",
-      "title": "Calais → Nederland",
-      "start": "2026-08-30T17:35:00",
-      "end": "2026-08-30T22:30:00",
+      "title": "Autorit: Calais → Apeldoorn",
+      "start": "2026-08-30T18:05:00",
+      "end": "2026-08-30T23:15:00",
       "timezone": "Europe/Paris",
       "status": "tentative",
-      "location": "Calais → Nederland",
-      "description": "Geschatte reistijd inclusief een pauze; aankomst hangt af van verkeer en de uitstaptijden."
+      "location": "Port de Calais → Apeldoorn",
+      "description": "Routeberekening: circa 391 km en 4 uur 34 minuten zonder stops of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen; eindtijd bevat circa 35 minuten pauze/buffer."
     }
   ]
 }

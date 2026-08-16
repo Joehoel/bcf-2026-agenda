@@ -64,12 +64,15 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:depart-nl@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
-SUMMARY:Vertrek vanuit Nederland
-DTSTART;TZID=Europe/Amsterdam:20260825T080000
-DTEND;TZID=Europe/Amsterdam:20260825T081500
-LOCATION:Verzamelplek nog afspreken
-DESCRIPTION:Richting Calais. Reken op ongeveer vier uur rijden plus pauze
- \, file\, inchecken en grenscontrole.
+SUMMARY:Autorit: Apeldoorn → Calais
+DTSTART;TZID=Europe/Amsterdam:20260825T060000
+DTEND;TZID=Europe/Amsterdam:20260825T103500
+LOCATION:Apeldoorn → Port de Calais\, 62100 Calais\, Frankrijk
+DESCRIPTION:Routeberekening: circa 390 km en 4 uur 34 minuten zonder stop
+ s of vertraging. Vertrek om 06:00 is het veilige voorstel: mik op aankom
+ st uiterlijk 11:20 (twee uur voor vertrek)\; de uiterste voertuigcheck-i
+ n is 12:20. Vertrek om 08:00 is te laat: zelfs zonder pauze kom je pas r
+ ond 12:34 aan.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
@@ -89,31 +92,59 @@ DTSTAMP:20260816T120000Z
 SUMMARY:Voorvakantie op Camping Green Acres
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260828
-LOCATION:Camping Green Acres — exact adres controleren
+LOCATION:Green Acres Farm Certificated Site\, Three Acres\, Sandy Lane\, 
+ Horspath\, Oxford OX33 1TF\, Verenigd Koninkrijk
 DESCRIPTION:Drie nachten. Inchecken volgens de boekingsinformatie tussen 
  14:00 en 20:00. Programma bewust ontspannen en grotendeels open.
 END:VEVENT
 BEGIN:VEVENT
 UID:green-acres-arrival@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
+SUMMARY:Autorit: Dover → Green Acres
+DTSTART;TZID=Europe/London:20260825T142000
+DTEND;TZID=Europe/London:20260825T170000
+LOCATION:Port of Dover → Three Acres\, Sandy Lane\, Horspath\, Oxford O
+ X33 1TF
+DESCRIPTION:Routeberekening: circa 224 km en 2 uur 38 minuten zonder stop
+ s of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen in
+  Dover\; verwachte aankomst rond 17:00.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:green-acres-setup@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
 SUMMARY:Aankomst en tenten opzetten bij Green Acres
-DTSTART;TZID=Europe/London:20260825T163000
-DTEND;TZID=Europe/London:20260825T180000
-LOCATION:Camping Green Acres — exact adres controleren
-DESCRIPTION:Geschatte aankomst\; pas aan zodra route en exact campingadre
- s bevestigd zijn.
+DTSTART;TZID=Europe/London:20260825T170000
+DTEND;TZID=Europe/London:20260825T183000
+LOCATION:Green Acres Farm Certificated Site\, Three Acres\, Sandy Lane\, 
+ Horspath\, Oxford OX33 1TF\, Verenigd Koninkrijk
+DESCRIPTION:Geschatte aankomst op basis van de route vanaf Dover. De oors
+ pronkelijke groepsinformatie noemt inchecken tussen 14:00 en 20:00.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:green-acres-pack@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Tenten afbreken en Green Acres verlaten
+DTSTART;TZID=Europe/London:20260828T073000
+DTEND;TZID=Europe/London:20260828T090000
+LOCATION:Green Acres Farm Certificated Site\, Three Acres\, Sandy Lane\, 
+ Horspath\, Oxford OX33 1TF\, Verenigd Koninkrijk
+DESCRIPTION:Voorlopig tijdvak om twee tenten en alle kampeerspullen in te
+  pakken vóór de rit naar Big Church Festival.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf-travel@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
-SUMMARY:Green Acres → Big Church Festival
-DTSTART;TZID=Europe/London:20260828T083000
-DTEND;TZID=Europe/London:20260828T123000
-LOCATION:Wiston Estate\, Steyning\, BN44 3DD
-DESCRIPTION:Tenten afbreken\, rijden\, toegang en tenten opzetten. Exacte
-  tijden hangen af van het campingadres en de boeking. Campingingang BCF 
- via Green Gate\; volg de evenementborden.
+SUMMARY:Autorit: Green Acres → Big Church Festival
+DTSTART;TZID=Europe/London:20260828T090000
+DTEND;TZID=Europe/London:20260828T110000
+LOCATION:Three Acres\, Sandy Lane\, Horspath\, Oxford OX33 1TF → Wiston
+  Estate\, Steyning BN44 3DD
+DESCRIPTION:Routeberekening: circa 149 km en 2 uur zonder stops of vertra
+ ging. Campingingang Big Church via Green Gate\; volg bij aankomst de eve
+ nementborden.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
@@ -145,11 +176,24 @@ SUMMARY:Tenten afbreken en Big Church verlaten
 DTSTART;TZID=Europe/London:20260830T073000
 DTEND;TZID=Europe/London:20260830T101500
 LOCATION:Wiston Estate\, Steyning\, BN44 3DD
-DESCRIPTION:Voorstel: uiterlijk 10:15 wegrijden. Route naar Dover is circ
- a 2 uur 8 minuten zonder vertraging\; Big Church adviseert minstens 30 m
- inuten voor uitrijden. P&O check-in sluit 60 minuten vóór vertrek en a
- dviseert extra tijd voor security. Hierdoor wordt vrijwel de hele zondag
-  gemist\; festivalpoorten openen pas 10:00.
+DESCRIPTION:Voorstel: om 07:30 beginnen en uiterlijk 10:15 wegrijden. Big
+  Church adviseert minstens 30 minuten voor het verlaten van het terrein.
+  Omdat de festivalpoorten om 10:00 openen\, wordt vrijwel de hele zondag
+  gemist.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf-dover-drive@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Autorit: Big Church Festival → Dover
+DTSTART;TZID=Europe/London:20260830T101500
+DTEND;TZID=Europe/London:20260830T122500
+LOCATION:Wiston Estate\, Steyning BN44 3DD → Port of Dover Eastern Dock
+ s
+DESCRIPTION:Routeberekening: circa 170 km en 2 uur 8 minuten zonder stops
+  of vertraging. Dit geeft ongeveer 40 minuten extra marge vóór de aanb
+ evolen aankomst om 13:05 en 1 uur 40 vóór de uiterste check-in om 14:0
+ 5.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
@@ -165,12 +209,13 @@ END:VEVENT
 BEGIN:VEVENT
 UID:drive-home@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
-SUMMARY:Calais → Nederland
-DTSTART;TZID=Europe/Paris:20260830T173500
-DTEND;TZID=Europe/Paris:20260830T223000
-LOCATION:Calais → Nederland
-DESCRIPTION:Geschatte reistijd inclusief een pauze\; aankomst hangt af va
- n verkeer en de uitstaptijden.
+SUMMARY:Autorit: Calais → Apeldoorn
+DTSTART;TZID=Europe/Paris:20260830T180500
+DTEND;TZID=Europe/Paris:20260830T231500
+LOCATION:Port de Calais → Apeldoorn
+DESCRIPTION:Routeberekening: circa 391 km en 4 uur 34 minuten zonder stop
+ s of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen\; 
+ eindtijd bevat circa 35 minuten pauze/buffer.
 STATUS:TENTATIVE
 END:VEVENT
 END:VCALENDAR
