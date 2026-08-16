@@ -77,8 +77,62 @@ const ics = [
   ''
 ].map(fold).join('\r\n');
 
+const htmlEsc = value => String(value ?? '')
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+const dayFormatter = new Intl.DateTimeFormat('nl-NL', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+const longDateFormatter = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const utcDate = value => {
+  const [year, month, day] = value.slice(0, 10).split('-').map(Number);
+  return new Date(Date.UTC(year, month - 1, day));
+};
+const formatDay = value => dayFormatter.format(utcDate(value));
+const zoneLabel = zone => ({ 'Europe/Amsterdam': 'NL', 'Europe/Paris': 'FR', 'Europe/London': 'UK' })[zone] || zone;
+const eventMarkup = event => {
+  let day;
+  let time;
+  if (event.allDay) {
+    const inclusiveEnd = new Date(utcDate(event.endDate).getTime() - 86400000);
+    day = `${formatDay(event.startDate)} – ${dayFormatter.format(inclusiveEnd)}`;
+    time = 'Hele dag';
+  } else {
+    const startZone = event.startTimezone || event.timezone;
+    const endZone = event.endTimezone || event.timezone;
+    day = formatDay(event.start);
+    time = `${event.start.slice(11, 16)} ${zoneLabel(startZone)} – ${event.end.slice(11, 16)} ${zoneLabel(endZone)}`;
+  }
+  const badge = event.status === 'tentative' ? '<span class="badge">Voorlopig</span>' : '';
+  const details = event.description
+    ? `<details><summary>Details</summary><p>${htmlEsc(event.description)}</p></details>`
+    : '';
+  return `
+        <article class="event" data-event-id="${htmlEsc(event.id)}">
+          <div class="event-when"><strong>${htmlEsc(day)}</strong>${htmlEsc(time)}</div>
+          <div class="event-content">
+            <h3>${htmlEsc(event.title)}</h3>
+            ${event.location ? `<p class="event-location">${htmlEsc(event.location)}</p>` : ''}
+            ${badge}
+            ${details}
+          </div>
+        </article>`;
+};
+const allDatedEvents = data.events.filter(event => event.allDay || event.start);
+const firstDate = allDatedEvents.map(event => event.allDay ? event.startDate : event.start).sort()[0];
+const lastDate = allDatedEvents.map(event => event.allDay ? event.endDate : event.end).sort().at(-1);
+const dateRange = `${formatDay(firstDate).replace(/^./, char => char.toUpperCase())} – ${longDateFormatter.format(utcDate(lastDate))}`;
+const html = fs.readFileSync(path.join(root, 'site/index.html'), 'utf8')
+  .replaceAll('{{CALENDAR_NAME}}', htmlEsc(data.calendar.name))
+  .replaceAll('{{DATE_RANGE}}', htmlEsc(dateRange))
+  .replaceAll('{{EVENTS}}', data.events.map(eventMarkup).join(''))
+  .replaceAll('{{OPEN_ITEMS}}', data.openItems.map(item => `<li class="open-item">${htmlEsc(item)}</li>`).join('\n          '))
+  .replaceAll('{{LAST_UPDATED}}', htmlEsc(longDateFormatter.format(utcDate(data.calendar.lastUpdated))))
+  .replace(/[ \t]+$/gm, '');
+
 fs.writeFileSync(path.join(out, 'calendar.ics'), ics);
+fs.writeFileSync(path.join(out, 'index.html'), html);
 fs.copyFileSync(path.join(root, 'data/calendar.json'), path.join(out, 'calendar.json'));
-fs.copyFileSync(path.join(root, 'site/index.html'), path.join(out, 'index.html'));
 fs.copyFileSync(path.join(root, 'site/styles.css'), path.join(out, 'styles.css'));
-console.log(`Built ${data.events.length} events into docs/calendar.ics`);
+console.log(`Built ${data.events.length} events into ICS and HTML`);

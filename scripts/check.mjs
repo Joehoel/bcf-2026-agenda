@@ -19,4 +19,18 @@ for (const line of ics.split('\r\n')) {
   if (Buffer.byteLength(line, 'utf8') > 75) throw new Error(`ICS-regel langer dan 75 bytes: ${line}`);
 }
 if (!ics.endsWith('\r\n')) throw new Error('ICS moet eindigen met CRLF');
-console.log(`OK: ${data.events.length} unieke events; JSON en ICS zijn consistent.`);
+
+const html = fs.readFileSync(new URL('../docs/index.html', import.meta.url), 'utf8');
+const css = fs.readFileSync(new URL('../docs/styles.css', import.meta.url), 'utf8');
+if ((html.match(/data-event-id=/g) || []).length !== data.events.length) throw new Error('HTML bevat niet alle agenda-events');
+for (const event of data.events) {
+  if (!html.includes(`data-event-id="${event.id}"`)) throw new Error(`Event ontbreekt in HTML: ${event.id}`);
+}
+if ((html.match(/class="open-item"/g) || []).length !== data.openItems.length) throw new Error('HTML bevat niet alle openstaande punten');
+if (html.includes("fetch('calendar.json')")) throw new Error('HTML mag niet afhankelijk zijn van client-side JSON-rendering');
+if (!css.includes('--apple-blue: #0071e3') || !css.includes('--apple-gray: #f5f5f7')) throw new Error('Apple-design tokens ontbreken');
+if (!css.includes('-apple-system')) throw new Error('Apple system-font stack ontbreekt');
+const workflow = fs.readFileSync(new URL('../.github/workflows/pages.yml', import.meta.url), 'utf8');
+if (!workflow.includes('contents: write')) throw new Error('Pages-workflow kan gegenereerde HTML niet terugschrijven');
+if (!workflow.includes('git add docs')) throw new Error('Pages-workflow synchroniseert docs niet met de agenda');
+console.log(`OK: ${data.events.length} unieke events; JSON, ICS en HTML zijn consistent.`);

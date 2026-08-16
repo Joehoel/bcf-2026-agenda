@@ -1,23 +1,188 @@
 <!doctype html>
 <html lang="nl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152a23"><title>Vakantie & Big Church 2026</title><link rel="stylesheet" href="styles.css"></head>
-<body><main>
-  <header><p class="eyebrow">25–30 augustus 2026</p><h1>Vakantie &<br>Big Church Festival</h1><p class="intro">Eén gedeelde agenda voor de reis, Green Acres en het festival. Wijzigingen in GitHub verschijnen automatisch bij abonnees.</p><div class="actions"><a id="subscribe" class="primary" href="calendar.ics">Abonneer op iPhone</a><a class="secondary" href="calendar.ics">Download .ics</a></div><p class="hint">Op iPhone: tik op <strong>Abonneer</strong> en bevestig de agenda. Updates kunnen door Apple met vertraging worden opgehaald.</p></header>
-  <section><div class="section-head"><p class="eyebrow">Planning</p><h2>Wat staat er?</h2></div><div id="events" class="timeline" aria-live="polite"></div></section>
-  <section class="card"><p class="eyebrow">Nog regelen</p><h2>Openstaande punten</h2><ul id="open-items"></ul></section>
-  <footer><p>Bronbestand: <a href="calendar.json">calendar.json</a> · Agenda: <a href="calendar.ics">calendar.ics</a></p></footer>
-</main><script>
-const dayFmt = new Intl.DateTimeFormat('nl-NL',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'});
-const zoneLabel = zone => ({'Europe/Amsterdam':'NL','Europe/Paris':'FR','Europe/London':'UK'})[zone] || '';
-const localDay = value => { const [y,m,d]=value.slice(0,10).split('-').map(Number); return dayFmt.format(new Date(Date.UTC(y,m-1,d))); };
-const eventTime = e => {
- if(e.allDay) return `${localDay(e.startDate)} – ${localDay(e.endDate)} (hele dag)`;
- const zone=e.startTimezone||e.timezone;
- return `${localDay(e.start)} · ${e.start.slice(11,16)} ${zoneLabel(zone)}`;
-};
-fetch('calendar.json').then(r=>r.json()).then(data=>{
- document.querySelector('#events').innerHTML=data.events.map(e=>`<article><time>${eventTime(e)}</time><div><h3>${e.title}</h3><p>${e.location||''}</p>${e.status==='tentative'?'<span>Voorlopig</span>':''}</div></article>`).join('');
- document.querySelector('#open-items').innerHTML=data.openItems.map(x=>`<li>${x}</li>`).join('');
-});
-if(location.protocol==='https:') document.querySelector('#subscribe').href='webcal://'+location.host+location.pathname.replace(/\/?$/,'/')+'calendar.ics';
-</script></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Gedeelde planning voor de vakantie en Big Church Festival 2026.">
+  <title>Vakantie &amp; Big Church Festival 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a class="nav-title" href="#top">Big Church 2026</a>
+      <a class="nav-link" href="#planning">Planning</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <p class="overline">Di 25 aug – 30 augustus 2026</p>
+      <h1>Vakantie &amp;<br>Big Church Festival</h1>
+      <p class="intro">De gezamenlijke planning voor de reis, Green Acres en Big Church Festival.</p>
+      <div class="actions">
+        <a id="subscribe" class="button button-primary" href="calendar.ics">Abonneer op iPhone</a>
+        <a class="button button-secondary" href="calendar.ics">Download agenda</a>
+      </div>
+      <p class="note">Wijzigingen worden automatisch gepubliceerd. Apple kan enige tijd nodig hebben om een agenda-abonnement te verversen.</p>
+    </header>
+
+    <section id="planning" class="section" aria-labelledby="planning-title">
+      <div class="section-heading">
+        <p class="overline">Planning</p>
+        <h2 id="planning-title">Alles op een rij.</h2>
+      </div>
+      <div class="event-list">
+
+        <article class="event" data-event-id="depart-nl">
+          <div class="event-when"><strong>di 25 aug</strong>08:00 NL – 12:30 NL</div>
+          <div class="event-content">
+            <h3>Gepland vertrek: Apeldoorn → Calais (bevestigen)</h3>
+            <p class="event-location">Distelvlinderlaan, Apeldoorn → Port of Calais Ferry Entrance, 285 Avenue du Mérite Maritime, Calais</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Google Maps geeft ongeveer 4 uur rijden vanaf de Distelvlinderlaan naar de ferry-ingang. In de agenda is 4 uur 30 minuten gereserveerd voor een korte stop en beperkte vertraging. De geboekte ferry vertrekt om 13:20 en de uiterste voertuigcheck-in is 12:20, na security. Vertrek om 08:00 biedt daarom onvoldoende betrouwbare marge; met de groepsvuistregel van zes uur vóór de ferry zou vertrek rond 07:20 passen. Definitieve vertrektijd samen afspreken.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="ferry-out">
+          <div class="event-when"><strong>di 25 aug</strong>13:20 FR – 13:50 UK</div>
+          <div class="event-content">
+            <h3>P&amp;O Ferry: Calais → Dover</h3>
+            <p class="event-location">Port de Calais → Port of Dover</p>
+
+            <details><summary>Details</summary><p>Bevestigd in de P&amp;O-boekingsafbeelding: Calais → Dover op 25 augustus 2026, vertrek 13:20 en aankomst 13:50 lokale tijd. Product: Standard. Schip: P&amp;O Liberte. Een eerdere boot rond 12:00 is later in de groepschat alleen als mogelijke wijziging genoemd en is niet de huidige boeking.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="green-acres-stay">
+          <div class="event-when"><strong>di 25 aug – do 27 aug</strong>Hele dag</div>
+          <div class="event-content">
+            <h3>Voorvakantie op Camping Green Acres</h3>
+            <p class="event-location">Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk</p>
+
+            <details><summary>Details</summary><p>Drie nachten. Inchecken volgens de boekingsinformatie tussen 14:00 en 20:00. Programma bewust ontspannen en grotendeels open.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="green-acres-arrival">
+          <div class="event-when"><strong>di 25 aug</strong>14:20 UK – 17:00 UK</div>
+          <div class="event-content">
+            <h3>Autorit: Dover → Green Acres</h3>
+            <p class="event-location">Port of Dover → Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Routeberekening: circa 224 km en 2 uur 38 minuten zonder stops of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen in Dover; verwachte aankomst rond 17:00.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="green-acres-setup">
+          <div class="event-when"><strong>di 25 aug</strong>17:00 UK – 18:30 UK</div>
+          <div class="event-content">
+            <h3>Aankomst en tenten opzetten bij Green Acres</h3>
+            <p class="event-location">Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Geschatte aankomst op basis van de route vanaf Dover. De oorspronkelijke groepsinformatie noemt inchecken tussen 14:00 en 20:00.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="green-acres-pack">
+          <div class="event-when"><strong>vr 28 aug</strong>07:30 UK – 09:00 UK</div>
+          <div class="event-content">
+            <h3>Tenten afbreken en Green Acres verlaten</h3>
+            <p class="event-location">Green Acres Farm Certificated Site, Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF, Verenigd Koninkrijk</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Voorlopig tijdvak om twee tenten en alle kampeerspullen in te pakken vóór de rit naar Big Church Festival.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="bcf-travel">
+          <div class="event-when"><strong>vr 28 aug</strong>09:00 UK – 11:00 UK</div>
+          <div class="event-content">
+            <h3>Autorit: Green Acres → Big Church Festival</h3>
+            <p class="event-location">Three Acres, Sandy Lane, Horspath, Oxford OX33 1TF → Wiston Estate, Steyning BN44 3DD</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Routeberekening: circa 149 km en 2 uur zonder stops of vertraging. Campingingang Big Church via Green Gate; volg bij aankomst de evenementborden.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="bcf-friday">
+          <div class="event-when"><strong>vr 28 aug</strong>12:30 UK – 22:15 UK</div>
+          <div class="event-content">
+            <h3>Big Church Festival — vrijdag</h3>
+            <p class="event-location">Wiston Estate, Steyning, BN44 3DD</p>
+
+            <details><summary>Details</summary><p>Officieel: poorten voor iedereen en terrein open 10:00, podia vanaf 12:30, Main Stage klaar 22:15; campersprogramma 22:30–00:00. Tijden kunnen wijzigen.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="bcf-saturday">
+          <div class="event-when"><strong>za 29 aug</strong>10:00 UK – 22:15 UK</div>
+          <div class="event-content">
+            <h3>Big Church Festival — zaterdag</h3>
+            <p class="event-location">Wiston Estate, Steyning, BN44 3DD</p>
+
+            <details><summary>Details</summary><p>Officieel: poorten en terrein open 10:00, podia vanaf 12:30, Main Stage klaar 22:15; campersprogramma 22:30–00:00. Tijden kunnen wijzigen.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="pack-and-leave-bcf">
+          <div class="event-when"><strong>zo 30 aug</strong>08:30 UK – 10:15 UK</div>
+          <div class="event-content">
+            <h3>Tenten afbreken en Big Church verlaten</h3>
+            <p class="event-location">Wiston Estate, Steyning, BN44 3DD</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Voorlopig tijdvak van 1 uur 45 minuten om de twee tenten en kampeerspullen in te pakken. Om 07:30 beginnen was niet noodzakelijk voor de ferry. Streef ernaar om om 10:15 daadwerkelijk van de camping te vertrekken.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="bcf-dover-drive">
+          <div class="event-when"><strong>zo 30 aug</strong>10:15 UK – 12:55 UK</div>
+          <div class="event-content">
+            <h3>Big Church verlaten en autorit naar Dover</h3>
+            <p class="event-location">Wiston Estate, Steyning BN44 3DD → Port of Dover Eastern Docks</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Rond tijdvak met marge: Big Church adviseert minstens 30 minuten om het terrein te verlaten en de rit naar Dover duurt ongeveer 2 uur 10 minuten. Verwachte aankomst rond 12:55. De ferry vertrekt om 15:05 en de uiterste voertuigcheck-in is 14:05, na security.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="ferry-back">
+          <div class="event-when"><strong>zo 30 aug</strong>15:05 UK – 17:35 FR</div>
+          <div class="event-content">
+            <h3>P&amp;O Ferry: Dover → Calais</h3>
+            <p class="event-location">Port of Dover → Port de Calais</p>
+
+            <details><summary>Details</summary><p>Bevestigd in de P&amp;O-boekingsafbeelding: Dover → Calais op 30 augustus 2026, vertrek 15:05 en aankomst 17:35 lokale tijd. Product: Standard. Schip: P&amp;O Liberte. P&amp;O voertuigcheck-in sluit om 14:05, na security; mik vanwege grenscontrole en zomerdrukte op aankomst rond 13:05.</p></details>
+          </div>
+        </article>
+        <article class="event" data-event-id="drive-home">
+          <div class="event-when"><strong>zo 30 aug</strong>18:05 FR – 23:15 FR</div>
+          <div class="event-content">
+            <h3>Autorit: Calais → Apeldoorn</h3>
+            <p class="event-location">Port de Calais → Apeldoorn</p>
+            <span class="badge">Voorlopig</span>
+            <details><summary>Details</summary><p>Routeberekening: circa 391 km en 4 uur 34 minuten zonder stops of vertraging. Starttijd rekent ongeveer 30 minuten voor ontschepen; eindtijd bevat circa 35 minuten pauze/buffer.</p></details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="todo-title">
+      <div class="panel">
+        <p class="overline">Nog regelen</p>
+        <h2 id="todo-title">Openstaande punten</h2>
+        <ul class="todo-list">
+          <li class="open-item">Dinsdaglogistiek beslissen: reken voor de autorit vanaf de Distelvlinderlaan ongeveer 4 uur, plus pauze en vertraging. De agenda reserveert 4 uur 30 minuten. Bij de bevestigde ferry van 13:20 en uiterste check-in om 12:20 is vertrek om 08:00 krap; de groepsvuistregel van zes uur vóór vertrek komt uit rond 07:20.</li>
+          <li class="open-item">Joël en Sietse over de auto&#39;s verdelen</li>
+          <li class="open-item">Campingboeking voor twee tenten controleren</li>
+          <li class="open-item">Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen</li>
+          <li class="open-item">Betaling Green Acres (€ 64,55 p.p.) controleren</li>
+          <li class="open-item">Paspoorten en UK ETA&#39;s controleren</li>
+          <li class="open-item">Walkietalkies regelen</li>
+          <li class="open-item">Definitieve vertrektijd vanaf Big Church op zondag bevestigen</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Laatst opgebouwd op 16 augustus 2026.</p>
+      <p><a href="calendar.json">Bekijk JSON</a><span aria-hidden="true"> · </span><a href="calendar.ics">Bekijk iCal</a><span aria-hidden="true"> · </span><a href="https://github.com/Joehoel/bcf-2026-agenda">GitHub</a></p>
+    </footer>
+  </main>
+
+  <script>
+    if (location.protocol === 'https:') {
+      const path = location.pathname.replace(/\/?$/, '/');
+      document.querySelector('#subscribe').href = `webcal://${location.host}${path}calendar.ics`;
+    }
+  </script>
+</body>
+</html>

@@ -1,23 +1,64 @@
 <!doctype html>
 <html lang="nl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152a23"><title>Vakantie & Big Church 2026</title><link rel="stylesheet" href="styles.css"></head>
-<body><main>
-  <header><p class="eyebrow">25–30 augustus 2026</p><h1>Vakantie &<br>Big Church Festival</h1><p class="intro">Eén gedeelde agenda voor de reis, Green Acres en het festival. Wijzigingen in GitHub verschijnen automatisch bij abonnees.</p><div class="actions"><a id="subscribe" class="primary" href="calendar.ics">Abonneer op iPhone</a><a class="secondary" href="calendar.ics">Download .ics</a></div><p class="hint">Op iPhone: tik op <strong>Abonneer</strong> en bevestig de agenda. Updates kunnen door Apple met vertraging worden opgehaald.</p></header>
-  <section><div class="section-head"><p class="eyebrow">Planning</p><h2>Wat staat er?</h2></div><div id="events" class="timeline" aria-live="polite"></div></section>
-  <section class="card"><p class="eyebrow">Nog regelen</p><h2>Openstaande punten</h2><ul id="open-items"></ul></section>
-  <footer><p>Bronbestand: <a href="calendar.json">calendar.json</a> · Agenda: <a href="calendar.ics">calendar.ics</a></p></footer>
-</main><script>
-const dayFmt = new Intl.DateTimeFormat('nl-NL',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'});
-const zoneLabel = zone => ({'Europe/Amsterdam':'NL','Europe/Paris':'FR','Europe/London':'UK'})[zone] || '';
-const localDay = value => { const [y,m,d]=value.slice(0,10).split('-').map(Number); return dayFmt.format(new Date(Date.UTC(y,m-1,d))); };
-const eventTime = e => {
- if(e.allDay) return `${localDay(e.startDate)} – ${localDay(e.endDate)} (hele dag)`;
- const zone=e.startTimezone||e.timezone;
- return `${localDay(e.start)} · ${e.start.slice(11,16)} ${zoneLabel(zone)}`;
-};
-fetch('calendar.json').then(r=>r.json()).then(data=>{
- document.querySelector('#events').innerHTML=data.events.map(e=>`<article><time>${eventTime(e)}</time><div><h3>${e.title}</h3><p>${e.location||''}</p>${e.status==='tentative'?'<span>Voorlopig</span>':''}</div></article>`).join('');
- document.querySelector('#open-items').innerHTML=data.openItems.map(x=>`<li>${x}</li>`).join('');
-});
-if(location.protocol==='https:') document.querySelector('#subscribe').href='webcal://'+location.host+location.pathname.replace(/\/?$/,'/')+'calendar.ics';
-</script></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Gedeelde planning voor de vakantie en Big Church Festival 2026.">
+  <title>{{CALENDAR_NAME}}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a class="nav-title" href="#top">Big Church 2026</a>
+      <a class="nav-link" href="#planning">Planning</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <p class="overline">{{DATE_RANGE}}</p>
+      <h1>Vakantie &amp;<br>Big Church Festival</h1>
+      <p class="intro">De gezamenlijke planning voor de reis, Green Acres en Big Church Festival.</p>
+      <div class="actions">
+        <a id="subscribe" class="button button-primary" href="calendar.ics">Abonneer op iPhone</a>
+        <a class="button button-secondary" href="calendar.ics">Download agenda</a>
+      </div>
+      <p class="note">Wijzigingen worden automatisch gepubliceerd. Apple kan enige tijd nodig hebben om een agenda-abonnement te verversen.</p>
+    </header>
+
+    <section id="planning" class="section" aria-labelledby="planning-title">
+      <div class="section-heading">
+        <p class="overline">Planning</p>
+        <h2 id="planning-title">Alles op een rij.</h2>
+      </div>
+      <div class="event-list">
+        {{EVENTS}}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="todo-title">
+      <div class="panel">
+        <p class="overline">Nog regelen</p>
+        <h2 id="todo-title">Openstaande punten</h2>
+        <ul class="todo-list">
+          {{OPEN_ITEMS}}
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Laatst opgebouwd op {{LAST_UPDATED}}.</p>
+      <p><a href="calendar.json">Bekijk JSON</a><span aria-hidden="true"> · </span><a href="calendar.ics">Bekijk iCal</a><span aria-hidden="true"> · </span><a href="https://github.com/Joehoel/bcf-2026-agenda">GitHub</a></p>
+    </footer>
+  </main>
+
+  <script>
+    if (location.protocol === 'https:') {
+      const path = location.pathname.replace(/\/?$/, '/');
+      document.querySelector('#subscribe').href = `webcal://${location.host}${path}calendar.ics`;
+    }
+  </script>
+</body>
+</html>

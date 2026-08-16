@@ -1,2 +1,8 @@
 # iCalendar requires CRLF line endings; treat generated feed as binary.
 *.ics binary
+
+# Keep source and generated web assets consistent across platforms.
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
