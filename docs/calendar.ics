@@ -179,27 +179,27 @@ BEGIN:VEVENT
 UID:pack-and-leave-bcf@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
 SUMMARY:Tenten afbreken en Big Church verlaten
-DTSTART;TZID=Europe/London:20260830T073000
+DTSTART;TZID=Europe/London:20260830T083000
 DTEND;TZID=Europe/London:20260830T101500
 LOCATION:Wiston Estate\, Steyning\, BN44 3DD
-DESCRIPTION:Voorstel: om 07:30 beginnen en uiterlijk 10:15 wegrijden. Big
-  Church adviseert minstens 30 minuten voor het verlaten van het terrein.
-  Omdat de festivalpoorten om 10:00 openen\, wordt vrijwel de hele zondag
-  gemist.
+DESCRIPTION:Voorlopig tijdvak van 1 uur 45 minuten om de twee tenten en k
+ ampeerspullen in te pakken. Om 07:30 beginnen was niet noodzakelijk voor
+  de ferry. Streef ernaar om om 10:15 daadwerkelijk van de camping te ver
+ trekken.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf-dover-drive@bcf-2026-agenda
 DTSTAMP:20260816T120000Z
-SUMMARY:Autorit: Big Church Festival → Dover
+SUMMARY:Big Church verlaten en autorit naar Dover
 DTSTART;TZID=Europe/London:20260830T101500
-DTEND;TZID=Europe/London:20260830T122500
+DTEND;TZID=Europe/London:20260830T125500
 LOCATION:Wiston Estate\, Steyning BN44 3DD → Port of Dover Eastern Dock
  s
-DESCRIPTION:Routeberekening: circa 170 km en 2 uur 8 minuten zonder stops
-  of vertraging. Dit geeft ongeveer 40 minuten extra marge vóór de aanb
- evolen aankomst om 13:05 en 1 uur 40 vóór de uiterste check-in om 14:0
- 5.
+DESCRIPTION:Rond tijdvak met marge: Big Church adviseert minstens 30 minu
+ ten om het terrein te verlaten en de rit naar Dover duurt ongeveer 2 uur
+  10 minuten. Verwachte aankomst rond 12:55. De ferry vertrekt om 15:05 e
+ n de uiterste voertuigcheck-in is 14:05\, na security.
 STATUS:TENTATIVE
 END:VEVENT
 BEGIN:VEVENT

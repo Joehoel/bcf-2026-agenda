@@ -155,22 +155,22 @@
     {
       "id": "pack-and-leave-bcf",
       "title": "Tenten afbreken en Big Church verlaten",
-      "start": "2026-08-30T07:30:00",
+      "start": "2026-08-30T08:30:00",
       "end": "2026-08-30T10:15:00",
       "timezone": "Europe/London",
       "location": "Wiston Estate, Steyning, BN44 3DD",
       "status": "tentative",
-      "description": "Voorstel: om 07:30 beginnen en uiterlijk 10:15 wegrijden. Big Church adviseert minstens 30 minuten voor het verlaten van het terrein. Omdat de festivalpoorten om 10:00 openen, wordt vrijwel de hele zondag gemist."
+      "description": "Voorlopig tijdvak van 1 uur 45 minuten om de twee tenten en kampeerspullen in te pakken. Om 07:30 beginnen was niet noodzakelijk voor de ferry. Streef ernaar om om 10:15 daadwerkelijk van de camping te vertrekken."
     },
     {
       "id": "bcf-dover-drive",
-      "title": "Autorit: Big Church Festival → Dover",
+      "title": "Big Church verlaten en autorit naar Dover",
       "start": "2026-08-30T10:15:00",
-      "end": "2026-08-30T12:25:00",
+      "end": "2026-08-30T12:55:00",
       "timezone": "Europe/London",
       "location": "Wiston Estate, Steyning BN44 3DD → Port of Dover Eastern Docks",
       "status": "tentative",
-      "description": "Routeberekening: circa 170 km en 2 uur 8 minuten zonder stops of vertraging. Dit geeft ongeveer 40 minuten extra marge vóór de aanbevolen aankomst om 13:05 en 1 uur 40 vóór de uiterste check-in om 14:05."
+      "description": "Rond tijdvak met marge: Big Church adviseert minstens 30 minuten om het terrein te verlaten en de rit naar Dover duurt ongeveer 2 uur 10 minuten. Verwachte aankomst rond 12:55. De ferry vertrekt om 15:05 en de uiterste voertuigcheck-in is 14:05, na security."
     },
     {
       "id": "ferry-back",
