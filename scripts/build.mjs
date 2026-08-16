@@ -26,6 +26,18 @@ const fold = line => {
 };
 
 const stamp = data.calendar.lastUpdated.replaceAll('-', '') + 'T120000Z';
+const timezones = [
+  ['Europe/London', '+0000', '+0100', '010000', '020000', 'GMT', 'BST'],
+  ['Europe/Paris', '+0100', '+0200', '020000', '030000', 'CET', 'CEST'],
+  ['Europe/Amsterdam', '+0100', '+0200', '020000', '030000', 'CET', 'CEST']
+].flatMap(([tzid, winter, summer, springTime, autumnTime, standardName, daylightName]) => [
+  'BEGIN:VTIMEZONE', `TZID:${tzid}`, `X-LIC-LOCATION:${tzid}`,
+  'BEGIN:DAYLIGHT', `TZOFFSETFROM:${winter}`, `TZOFFSETTO:${summer}`, `TZNAME:${daylightName}`,
+  `DTSTART:19700329T${springTime}`, 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU', 'END:DAYLIGHT',
+  'BEGIN:STANDARD', `TZOFFSETFROM:${summer}`, `TZOFFSETTO:${winter}`, `TZNAME:${standardName}`,
+  `DTSTART:19701025T${autumnTime}`, 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'END:STANDARD',
+  'END:VTIMEZONE'
+]);
 const eventLines = data.events.flatMap(event => {
   const lines = [
     'BEGIN:VEVENT',
@@ -59,6 +71,7 @@ const ics = [
   `X-WR-CALNAME:${esc(data.calendar.name)}`,
   `X-WR-CALDESC:${esc(data.calendar.description)}`,
   `X-WR-TIMEZONE:${data.calendar.timezone}`,
+  ...timezones,
   ...eventLines,
   'END:VCALENDAR',
   ''

@@ -14,4 +14,9 @@ for (const e of data.events) {
 const ics = fs.readFileSync(new URL('../docs/calendar.ics', import.meta.url), 'utf8');
 for (const id of ids) if (!ics.includes(`UID:${id}@bcf-2026-agenda`)) throw new Error(`Event ontbreekt in ICS: ${id}`);
 if ((ics.match(/BEGIN:VEVENT/g) || []).length !== data.events.length) throw new Error('Aantal ICS-events klopt niet');
+if ((ics.match(/BEGIN:VTIMEZONE/g) || []).length !== 3) throw new Error('Tijdzones ontbreken in ICS');
+for (const line of ics.split('\r\n')) {
+  if (Buffer.byteLength(line, 'utf8') > 75) throw new Error(`ICS-regel langer dan 75 bytes: ${line}`);
+}
+if (!ics.endsWith('\r\n')) throw new Error('ICS moet eindigen met CRLF');
 console.log(`OK: ${data.events.length} unieke events; JSON en ICS zijn consistent.`);

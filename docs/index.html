@@ -7,9 +7,16 @@
   <section class="card"><p class="eyebrow">Nog regelen</p><h2>Openstaande punten</h2><ul id="open-items"></ul></section>
   <footer><p>Bronbestand: <a href="calendar.json">calendar.json</a> · Agenda: <a href="calendar.ics">calendar.ics</a></p></footer>
 </main><script>
-const fmt = new Intl.DateTimeFormat('nl-NL',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'});
+const dayFmt = new Intl.DateTimeFormat('nl-NL',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'});
+const zoneLabel = zone => ({'Europe/Amsterdam':'NL','Europe/Paris':'FR','Europe/London':'UK'})[zone] || '';
+const localDay = value => { const [y,m,d]=value.slice(0,10).split('-').map(Number); return dayFmt.format(new Date(Date.UTC(y,m-1,d))); };
+const eventTime = e => {
+ if(e.allDay) return `${localDay(e.startDate)} – ${localDay(e.endDate)} (hele dag)`;
+ const zone=e.startTimezone||e.timezone;
+ return `${localDay(e.start)} · ${e.start.slice(11,16)} ${zoneLabel(zone)}`;
+};
 fetch('calendar.json').then(r=>r.json()).then(data=>{
- document.querySelector('#events').innerHTML=data.events.map(e=>{const when=e.allDay?`${e.startDate} t/m ${e.endDate}`:fmt.format(new Date(e.start+(e.startTimezone==='Europe/Paris'||e.timezone==='Europe/Paris'?'+02:00':'+01:00')));return `<article><time>${when}</time><div><h3>${e.title}</h3><p>${e.location||''}</p>${e.status==='tentative'?'<span>Voorlopig</span>':''}</div></article>`}).join('');
+ document.querySelector('#events').innerHTML=data.events.map(e=>`<article><time>${eventTime(e)}</time><div><h3>${e.title}</h3><p>${e.location||''}</p>${e.status==='tentative'?'<span>Voorlopig</span>':''}</div></article>`).join('');
  document.querySelector('#open-items').innerHTML=data.openItems.map(x=>`<li>${x}</li>`).join('');
 });
 if(location.protocol==='https:') document.querySelector('#subscribe').href='webcal://'+location.host+location.pathname.replace(/\/?$/,'/')+'calendar.ics';
