@@ -1,0 +1,122 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BCF 2026 groep//Vakantieagenda//NL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Vakantie & Big Church Festival 2026
+X-WR-CALDESC:Gezamenlijke reisplanning voor Green Acres en Big Church Fes
+ tival 2026.
+X-WR-TIMEZONE:Europe/Amsterdam
+BEGIN:VEVENT
+UID:depart-nl@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Vertrek vanuit Nederland
+DTSTART;TZID=Europe/Amsterdam:20260825T080000
+DTEND;TZID=Europe/Amsterdam:20260825T081500
+LOCATION:Verzamelplek nog afspreken
+DESCRIPTION:Richting Calais. Reken op ongeveer vier uur rijden plus pauze
+ \, file\, inchecken en grenscontrole.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:ferry-out@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:P&O Ferry: Calais → Dover
+DTSTART;TZID=Europe/Paris:20260825T132000
+DTEND;TZID=Europe/London:20260825T135000
+LOCATION:Port de Calais → Port of Dover
+DESCRIPTION:Boekingstijden. Engeland is één uur vroeger\; de overtocht 
+ duurt feitelijk 1 uur 30 minuten. Zorg voor ruime marge voor grenscontro
+ le en check-in.
+END:VEVENT
+BEGIN:VEVENT
+UID:green-acres-stay@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Voorvakantie op Camping Green Acres
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260828
+LOCATION:Camping Green Acres — exact adres controleren
+DESCRIPTION:Drie nachten. Inchecken volgens de boekingsinformatie tussen 
+ 14:00 en 20:00. Programma bewust ontspannen en grotendeels open.
+END:VEVENT
+BEGIN:VEVENT
+UID:green-acres-arrival@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Aankomst en tenten opzetten bij Green Acres
+DTSTART;TZID=Europe/London:20260825T163000
+DTEND;TZID=Europe/London:20260825T180000
+LOCATION:Camping Green Acres — exact adres controleren
+DESCRIPTION:Geschatte aankomst\; pas aan zodra route en exact campingadre
+ s bevestigd zijn.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf-travel@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Green Acres → Big Church Festival
+DTSTART;TZID=Europe/London:20260828T083000
+DTEND;TZID=Europe/London:20260828T123000
+LOCATION:Wiston Estate\, Steyning\, BN44 3DD
+DESCRIPTION:Tenten afbreken\, rijden\, toegang en tenten opzetten. Exacte
+  tijden hangen af van het campingadres en de boeking. Campingingang BCF 
+ via Green Gate\; volg de evenementborden.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf-friday@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Big Church Festival — vrijdag
+DTSTART;TZID=Europe/London:20260828T123000
+DTEND;TZID=Europe/London:20260828T221500
+LOCATION:Wiston Estate\, Steyning\, BN44 3DD
+DESCRIPTION:Officieel: poorten voor iedereen en terrein open 10:00\, podi
+ a vanaf 12:30\, Main Stage klaar 22:15\; campersprogramma 22:30–00:00.
+  Tijden kunnen wijzigen.
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf-saturday@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Big Church Festival — zaterdag
+DTSTART;TZID=Europe/London:20260829T100000
+DTEND;TZID=Europe/London:20260829T221500
+LOCATION:Wiston Estate\, Steyning\, BN44 3DD
+DESCRIPTION:Officieel: poorten en terrein open 10:00\, podia vanaf 12:30\
+ , Main Stage klaar 22:15\; campersprogramma 22:30–00:00. Tijden kunnen
+  wijzigen.
+END:VEVENT
+BEGIN:VEVENT
+UID:pack-and-leave-bcf@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Tenten afbreken en Big Church verlaten
+DTSTART;TZID=Europe/London:20260830T073000
+DTEND;TZID=Europe/London:20260830T101500
+LOCATION:Wiston Estate\, Steyning\, BN44 3DD
+DESCRIPTION:Voorstel: uiterlijk 10:15 wegrijden. Route naar Dover is circ
+ a 2 uur 8 minuten zonder vertraging\; Big Church adviseert minstens 30 m
+ inuten voor uitrijden. P&O check-in sluit 60 minuten vóór vertrek en a
+ dviseert extra tijd voor security. Hierdoor wordt vrijwel de hele zondag
+  gemist\; festivalpoorten openen pas 10:00.
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:ferry-back@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:P&O Ferry: Dover → Calais
+DTSTART;TZID=Europe/London:20260830T150500
+DTEND;TZID=Europe/Paris:20260830T173500
+LOCATION:Port of Dover → Port de Calais
+DESCRIPTION:Boekingstijden. P&O voertuigcheck-in sluit om 14:05\, na secu
+ rity\; mik vanwege grenscontrole en zomerdrukte op aankomst rond 13:05.
+END:VEVENT
+BEGIN:VEVENT
+UID:drive-home@bcf-2026-agenda
+DTSTAMP:20260816T120000Z
+SUMMARY:Calais → Nederland
+DTSTART;TZID=Europe/Paris:20260830T173500
+DTEND;TZID=Europe/Paris:20260830T223000
+LOCATION:Calais → Nederland
+DESCRIPTION:Geschatte reistijd inclusief een pauze\; aankomst hangt af va
+ n verkeer en de uitstaptijden.
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,130 @@
+{
+  "calendar": {
+    "name": "Vakantie & Big Church Festival 2026",
+    "description": "Gezamenlijke reisplanning voor Green Acres en Big Church Festival 2026.",
+    "timezone": "Europe/Amsterdam",
+    "lastUpdated": "2026-08-16",
+    "sources": [
+      {"label": "Big Church Festival — event schedule", "url": "https://bigchurchfestival.com/helpful-info/event-schedule/"},
+      {"label": "Big Church Festival — route en vertrekadvies", "url": "https://bigchurchfestival.com/helpful-info/getting-here/"},
+      {"label": "P&O Ferries — check-ininformatie", "url": "https://www.poferries.com/en/routes/dover-to-calais/travel-information-25/passenger-travel-information"}
+    ]
+  },
+  "group": {
+    "people": ["Rob", "Joël", "Sietse", "Douwe", "Mirte"],
+    "tents": [
+      {"name": "Tent 1", "people": ["Rob", "Joël", "Sietse"]},
+      {"name": "Tent 2", "people": ["Douwe", "Mirte"]}
+    ],
+    "vehicles": ["Ford Fiesta — Rob", "Fiat Punto — Douwe en Mirte"]
+  },
+  "openItems": [
+    "Verzamelplek en definitieve vertrektijd op dinsdag afspreken",
+    "Joël en Sietse over de auto's verdelen",
+    "Campingboeking en exacte adresgegevens controleren",
+    "Tenten, slaapspullen, stroomaansluiting en verlengkabels verdelen",
+    "Betaling Green Acres (€ 64,55 p.p.) controleren",
+    "Paspoorten en UK ETA's controleren",
+    "Walkietalkies regelen",
+    "Definitieve vertrektijd vanaf Big Church op zondag bevestigen"
+  ],
+  "events": [
+    {
+      "id": "depart-nl",
+      "title": "Vertrek vanuit Nederland",
+      "start": "2026-08-25T08:00:00",
+      "end": "2026-08-25T08:15:00",
+      "timezone": "Europe/Amsterdam",
+      "location": "Verzamelplek nog afspreken",
+      "status": "tentative",
+      "description": "Richting Calais. Reken op ongeveer vier uur rijden plus pauze, file, inchecken en grenscontrole."
+    },
+    {
+      "id": "ferry-out",
+      "title": "P&O Ferry: Calais → Dover",
+      "start": "2026-08-25T13:20:00",
+      "startTimezone": "Europe/Paris",
+      "end": "2026-08-25T13:50:00",
+      "endTimezone": "Europe/London",
+      "location": "Port de Calais → Port of Dover",
+      "description": "Boekingstijden. Engeland is één uur vroeger; de overtocht duurt feitelijk 1 uur 30 minuten. Zorg voor ruime marge voor grenscontrole en check-in."
+    },
+    {
+      "id": "green-acres-stay",
+      "title": "Voorvakantie op Camping Green Acres",
+      "allDay": true,
+      "startDate": "2026-08-25",
+      "endDate": "2026-08-28",
+      "location": "Camping Green Acres — exact adres controleren",
+      "description": "Drie nachten. Inchecken volgens de boekingsinformatie tussen 14:00 en 20:00. Programma bewust ontspannen en grotendeels open."
+    },
+    {
+      "id": "green-acres-arrival",
+      "title": "Aankomst en tenten opzetten bij Green Acres",
+      "start": "2026-08-25T16:30:00",
+      "end": "2026-08-25T18:00:00",
+      "timezone": "Europe/London",
+      "location": "Camping Green Acres — exact adres controleren",
+      "status": "tentative",
+      "description": "Geschatte aankomst; pas aan zodra route en exact campingadres bevestigd zijn."
+    },
+    {
+      "id": "bcf-travel",
+      "title": "Green Acres → Big Church Festival",
+      "start": "2026-08-28T08:30:00",
+      "end": "2026-08-28T12:30:00",
+      "timezone": "Europe/London",
+      "location": "Wiston Estate, Steyning, BN44 3DD",
+      "status": "tentative",
+      "description": "Tenten afbreken, rijden, toegang en tenten opzetten. Exacte tijden hangen af van het campingadres en de boeking. Campingingang BCF via Green Gate; volg de evenementborden."
+    },
+    {
+      "id": "bcf-friday",
+      "title": "Big Church Festival — vrijdag",
+      "start": "2026-08-28T12:30:00",
+      "end": "2026-08-28T22:15:00",
+      "timezone": "Europe/London",
+      "location": "Wiston Estate, Steyning, BN44 3DD",
+      "description": "Officieel: poorten voor iedereen en terrein open 10:00, podia vanaf 12:30, Main Stage klaar 22:15; campersprogramma 22:30–00:00. Tijden kunnen wijzigen."
+    },
+    {
+      "id": "bcf-saturday",
+      "title": "Big Church Festival — zaterdag",
+      "start": "2026-08-29T10:00:00",
+      "end": "2026-08-29T22:15:00",
+      "timezone": "Europe/London",
+      "location": "Wiston Estate, Steyning, BN44 3DD",
+      "description": "Officieel: poorten en terrein open 10:00, podia vanaf 12:30, Main Stage klaar 22:15; campersprogramma 22:30–00:00. Tijden kunnen wijzigen."
+    },
+    {
+      "id": "pack-and-leave-bcf",
+      "title": "Tenten afbreken en Big Church verlaten",
+      "start": "2026-08-30T07:30:00",
+      "end": "2026-08-30T10:15:00",
+      "timezone": "Europe/London",
+      "location": "Wiston Estate, Steyning, BN44 3DD",
+      "status": "tentative",
+      "description": "Voorstel: uiterlijk 10:15 wegrijden. Route naar Dover is circa 2 uur 8 minuten zonder vertraging; Big Church adviseert minstens 30 minuten voor uitrijden. P&O check-in sluit 60 minuten vóór vertrek en adviseert extra tijd voor security. Hierdoor wordt vrijwel de hele zondag gemist; festivalpoorten openen pas 10:00."
+    },
+    {
+      "id": "ferry-back",
+      "title": "P&O Ferry: Dover → Calais",
+      "start": "2026-08-30T15:05:00",
+      "startTimezone": "Europe/London",
+      "end": "2026-08-30T17:35:00",
+      "endTimezone": "Europe/Paris",
+      "location": "Port of Dover → Port de Calais",
+      "description": "Boekingstijden. P&O voertuigcheck-in sluit om 14:05, na security; mik vanwege grenscontrole en zomerdrukte op aankomst rond 13:05."
+    },
+    {
+      "id": "drive-home",
+      "title": "Calais → Nederland",
+      "start": "2026-08-30T17:35:00",
+      "end": "2026-08-30T22:30:00",
+      "timezone": "Europe/Paris",
+      "status": "tentative",
+      "location": "Calais → Nederland",
+      "description": "Geschatte reistijd inclusief een pauze; aankomst hangt af van verkeer en de uitstaptijden."
+    }
+  ]
+}
